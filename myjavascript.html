@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page 1 </title>
+  <!--CDN based Jquery form Google-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--Site based Jquery from file-->
+  <script src="jquery-3.3.1.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="height: auto; width:auto">
+  <nav>
+    <a href="index.html">Home</a> | <a href="newpage.html">About Us</a> | <a href="page1.html">Products/Services</a> | <a href="contact.html">Contact Us</a> | <a href="myjavascript.html">JavaScript</a> | <a href="testjsskill.html">TestJsSkill</a>
+    | <a href="ajax.html">MyAjax</a> | <a href="mypage.html">MyPage </a> | <a href="myjquery.html">MyJQuery </a> | <a href="myjquery2.html">MyJQuery 2</a>
+  </nav>
+  </nav>
+
+  <!-- Empty Links -->
+  <a href="#"> Empty link</a>
+  <!-- Empty Links with javascript -->
+  <a href="javascript: void(0);"> Empty link</a>
+<div>
+  <p>
+    <script>
+    // Function Declaration
+  function Name(name1, name2)
+  {
+    if (name1==undefined || name2 == undefined) // check if any param is mising
+    {
+      var message = "Missing one parameter";
+    } else {
+      var message = name1 + " is the first name\n" +
+                name2 + " is the second name";
+    }
+    alert (message);
+  }
+  // calling the function
+  Name ("Peculiar", "Student");
+  </script>
+</p>
+</div>
+<div>
+<script>
+// Event Declaration
+function OnClick(txt)
+{
+  alert(txt);
+}
+</script>
+<button type="button" onclick='OnClick("Happy Valentine to my Love Ones!")'>
+  Example 1
+</button>
+</div>
+
+<div>
+<script>
+// Event Declaration
+function DblClick(txt)
+{
+  alert(txt);
+}
+</script>
+<button type="button" ondblclick='DblClick("I love my wife and son!")'>
+  Example 2
+</button>
+</div>
+
+
+  <!-- <script>
+  // Event Declaration
+  function StartFocus()
+  {
+    alert("You are focused");
+  }
+  </script>
+  <input type="text" onfocus="StartFocus();" value="" /> -->
+
+
+<div>
+  <script>
+  // Event Declaration
+  function StartBlur()
+  {
+    alert("You are leaving the field\nBlurred!");
+  }
+  </script>
+  <input type="text" onblur="StartBlur();" value="" />
+</div>
+<!-- Selecting HTML elements using getElementById()
+ change the value in input element -->
+<input type="text" id="MyID" value="Value" />
+<script>
+var MyID = document.getElementById("MyID");
+MyID.value = "JS put this value in here";
+</script>
+<!--Selecting HTML elements using getElementById()
+change the value in the innerHTML -->
+<div id="test">Change me</div>
+<script>
+  document.getElementById("test").innerHTML= "<b> New HTML in here!</b>";
+</script>
+<!--Selecting HTML elements using getElementById()
+ to change the backgroundcolor in the innerHTML -->
+<div id="myDiv" onclick="changeBG();">Change background color to red</div>
+<script>
+  function changeBG() {
+  document.getElementById("myDiv").style.backgroundColor = "red";
+  }
+  </script>
+
+  <!--Selecting HTML elements using getElementById()
+   to change many elements in the innerHTML and value -->
+  <div id="TestID">Change this.</div>
+  <button type="button" id="Button" onclick="ChangeMe();">Click2Change</button>
+  <script>
+  /** This is very powerful function for changing elements content.**/
+    function $(id) {
+      return document.getElementById(id);
+    }
+    function ChangeMe() {
+      $('TestID').style.border = "1px solid red";
+      $('TestID').innerHTML = "Added border and this text!";
+      $('Button').innerHTML = "Changed!";
+      $('Button').disabled = true;
+    }
+    </script>
+
+<script src="myJavascript.js" type="text/javascript"></script>
+</body>
+</html>

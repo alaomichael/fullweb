@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+<head>
+<title> MyJquery2 </title>
+    
+     <!--CDN based Jquery form Google-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--Site based Jquery from file-->
+  <script src="jquery-3.3.1.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+    <header>
+    <a href="#">Welcome</a>
+    <a href="index.html">Home</a> | <a href="newpage.html">About Us</a> | <a href="page1.html">Products/Services</a> | <a href="contact.html">Contact Us</a> | <a href="myjavascript.html">JavaScript</a> | <a href="testjsskill.html">TestJsSkill</a>
+    | <a href="ajax.html">MyAjax</a> | <a href="mypage.html">MyPage </a> | <a href="myjquery.html">MyJQuery </a> | <a href="myjquery2.html">MyJQuery 2</a>
+  </nav>
+  </header>
+    
+    <div id="data" data-number="24"> There is a number in here </div>
+    
+    <div id="title" title="This is testing my profiecincy in Jquery" > There is a title here. Click here to see it. </div>
+    
+    <div id="score" data-score="70"> Your score is in here </div>
+    <!-- Script start here -->
+    <script>
+        // extract stored data
+        $(document).ready(function(){
+            var MyDiv = $("div#data");
+            MyDiv.click(function(){
+                var divNumber = MyDiv.data("number");
+                alert(divNumber);
+            });
+        });
+        
+        // get the title of an element
+         $(document).ready(function(){
+            var MyDiv2 = $("div#title");
+            MyDiv2.click(function(){
+                alert(MyDiv2.attr("title"));
+                // we change the title here
+                MyDiv2.attr("title","Click the div below to see your score.");
+                alert(MyDiv2.attr("title"));
+                MyDiv2.html("You will See your score,when you click the div below");
+          });
+        });
+        
+        // get the data store in an element and change it.
+         $(document).ready(function(){
+            var MyDiv3 = $("div#score");
+            MyDiv3.click(function(){
+                var divScore = MyDiv3.data("score");
+                alert(divScore);
+                 $(MyDiv3).html("Here is your score " + divScore + ".");
+            });
+        });
+    </script>
+</body>
+</html>

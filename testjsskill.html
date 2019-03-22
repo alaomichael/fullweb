@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--CDN based Jquery form Google-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--Site based Jquery from file-->
+  <script src="jquery-3.3.1.min.js"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+<title> Testing My JS skill </title>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> | <a href="newpage.html">About Us</a> | <a href="page1.html">Products/Services</a> | <a href="contact.html">Contact Us</a> | <a href="myjavascript.html">JavaScript</a> | <a href="testjsskill.html">TestJsSkill</a>
+    | <a href="ajax.html">MyAjax</a> | <a href="mypage.html">MyPage </a> | <a href="myjquery.html">MyJQuery </a> | <a href="myjquery2.html">MyJQuery 2</a>
+  </nav>
+  </nav>
+
+
+    <div>
+    <p>Current Time: <span id="demo0"></span></p>
+    <script>
+    /* setInterval (function, delay in milliseconds 1.e 1000). 1000 = 1 second*/
+    function time(){
+      var d = new Date(); // How we start our new Date
+      var hour = d.getHours();
+      var minute = d.getMinutes();
+      var second = d.getSeconds();
+      var str = hour + ":" + minute + ":" + second;
+      document.getElementById("demo0").innerHTML = str; // Returns the current time
+      }
+      var initiate = setInterval(function(){time()}, 1000);
+      </script>
+    </div><br>
+    <div>
+      <script>
+      // setTimeout
+    var delayedAlert = setTimeout(function(){alert("Delayed for 5 seconds, before it appears.");}, 5000);
+    </script>
+  </div><br>
+<div>
+<p>Full Date</p>
+<script>
+var d = new Date(); // How we start our new Date
+document.write(d); // Returns the Full date
+</script>
+</div><br>
+<div>
+<p>Current Day</p>
+<script>
+var d = new Date(); // How we start our new Date
+var day = d.getDay(); // Return the index value of the current day
+var WeekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+document.write(WeekDays[day]); // Returns the day of the week
+</script>
+</div><br>
+  <div>
+    <input  type="text" value="Initial Value" id="MyInput" onclick="changeInput();" />
+    <button onclick="changeInput(); done();" type="button" id="changeMyInput">Click to Change Input</button>
+<script>
+ function changeInput (){
+   var MyInput = document.getElementById("MyInput");
+   MyInput.value = "Text changed. Congratulations.";
+ }
+ function done(){
+     document.getElementById("changeMyInput").innerHTML = "<b> Done!</b>";
+     document.getElementById("changeMyInput").disabled = true;
+ }
+</script>
+  </div>
+  <div>
+    <article id="MyText" onclick="changeText();"> The good thing about JavaScript is that you can change anyhthing in a breeze. Try to change the text here by clicking the button below.</article>
+    <button onclick="changeText(); done1(); changeColor();" type="button" id="changeMyText">Click to Change text</button>
+<script>
+ function changeText (){
+   var MyText = document.getElementById("MyText");
+   MyText.innerHTML="<b>This is the new text.</b>";
+ }
+function changeColor (){
+  var newColor = document.getElementById("MyText");
+  newColor.style.color ="yellow";
+  newColor.style.backgroundColor ="red";
+  newColor.style.border ="2px solid green";
+  }
+
+ function done1(){
+     document.getElementById("changeMyText").innerHTML = "<b> Done!</b>";
+     document.getElementById("changeMyText").disabled = true;
+ }
+</script>
+  </div>
+  <div>
+    <p> The following text was escaped <q><em>The boy is a Genus, by God's grace!</em></q> to what is below.</p>
+    <!--How to escape string with javascript -->
+    <script>
+    var EscapeMe = "The boy is a Genus, by God's grace!";
+    document.write(escape(EscapeMe));
+    </script>
+  </div>
+  <div>
+    <p>The above was Unescaped to what we have below.</p>
+    <!--How to unescape an already escaped string with javascript -->
+    <script>
+    var UnescapeMe = "The%20boy%20is%20a%20Genus%2C%20by%20God%27s%20grace%21";
+    document.write(unescape(UnescapeMe));
+    </script>
+  </div><br>
+  <div>
+    <script>
+    /* Regular Arrays*/
+    // To start any new array, we first define it.
+    var MyArray = new Array();
+    // We then add the array list
+    MyArray[0] = "Michael";
+    MyArray[1] = "Esther";
+    MyArray[2] = "Peculiar";
+    // We can display our list with the code below
+    document.write(MyArray[0] + ", " + MyArray[1] + " and " + MyArray[2] + " are a happy family." );
+    </script>
+  </div><br>
+  <div>
+    <script>
+    /* Condesed Arrays*/
+    // To start any new array, we first define it.We then add the array list with ().
+    var MyArray = new Array("Babatunde", "Oladuti", "Oluwafikunolaayomi");
+  // We can display our list with the code below
+    document.write(MyArray[0] + ", " + MyArray[1] + " and " + MyArray[2] + " are a happy family." );
+    </script>
+  </div><br>
+  <div>
+    <script>
+    /* Quicker Literal Arrays*/
+    // To start any new array, we use [].We then add the array list and separated with " , ".
+    var MyArray = ["Olamilekan", "Busola", "Ayodele"];
+  // We can display our list with the code below
+    alert(MyArray[0] + ", " + MyArray[1] + " and " + MyArray[2] + " are a loving happy family." ); // The three names.
+    </script>
+  </div>
+  <br>
+  <div>
+    <script>
+    /* Multi-dimensional Arrays*/
+    // To start any new array, we use [].We then add the array list and separated with " , ".
+    var MultiArr = [["Olamilekan", "Aderonke", "Ayodele"],[33,33,2]];
+  // We can display our list with the code below
+    alert(MultiArr[0][1]); // display "Ifemi"
+    alert(MultiArr[0][2] + " is " + MultiArr[1][2]); // Display "Ayodele is 2".
+    </script>
+  </div>
+
+  <br>
+  <div>
+    <script>
+    /* For loops with increment */
+  for (i = 0; i < 7; i++){
+    document.write("This program has looped " + i + " times and run " ,i+1, " time(s). <br>");
+  }
+    </script>
+  </div><br>
+  <div>
+    <script>
+    /* My Unique Arrays*/
+    // To start any new array, we use [].We then add the array list and separated with " , ".
+    var MyArray = ["God", "Jehovah", "Olorun", "Chineke", "Allah"];
+  // We can display our list with the code below
+    alert("The name of our Creator are " + MyArray[0] + ", " + MyArray[1] + ", " + MyArray[2] + ", " + MyArray[3] + " and " + MyArray[4] + " the Omnipotent, Omniscient and Omnipresent Supreme Being." ); // Display all the arrays value.
+    </script>
+  </div>
+  <br>
+  <div>
+    <script>
+    /* My Unique Arrays*/
+    // To start any new array, we use [].We then add the array list and separated with " , ".
+    var MyArrays = ["God", "Jehovah", "Olorun", "Chineke", "Allah", "Oghene"];
+  // We can display our list with the code below
+    for(v in MyArrays){
+    document.write("The name of our Creator is " + MyArrays[v]+".<br>" ); // Display all the arrays value one by one.
+    }
+    document.write("He is the Omnipotent, Omniscient and Omnipresent Supreme Being." );
+    </script>
+  </div>
+  <br>
+  <div>
+    <script>
+    /* While Loop increment */
+    var myNumber = 0;
+    while (myNumber < 3 ){
+      document.write(myNumber);
+      myNumber++;
+    }
+    </script>
+  </div>
+  <br>
+  <div>
+    <script>
+    /* While Loop with decrement */
+    var eleven = 11;
+    while (eleven > 0 ) {
+      document.write(eleven);
+      eleven--;
+    }
+    </script>
+  </div>
+  <br>
+  <div>
+    <script>
+    /* Do.. While Loop with increment */
+    var i = 0;
+    do  {
+      document.write(i + " is the int. number. <br>");
+      i++;
+    }
+    while (i < 5 )
+    </script>
+  </div>
+  <br>
+  <div>
+    <script>
+    /* Breaking out of For loops with increment */
+  for (i = 0; i < 8 ; i++){
+    document.write(i + " is the current number.<br>");
+    if(i==6){
+      break;
+    }
+  }
+    </script>
+  </div><br>
+  <div>
+    <script>
+    /* Breaking out of For loops with Array list. Use for feed data */
+    var friendFeed = new Array ("Feed 1", "Feed 2", "Feed 3", "Feed 4", "Feed 5");
+  for (index in friendFeed) {
+    document.write( friendFeed[index] + " <hr/>");
+    if(index==3){
+      break;
+    }
+  }
+    </script>
+  </div><br>
+
+  <div>
+    <p >This is extracted from my object; <span id="object"></span>. </p>
+    <script>
+    /*Create an Object, that contain other objects*/
+    var MyObjects = {
+                    cards : {
+                      visa: 1,
+                      mastercard: 1,
+                      debit: 0,
+                      amex: 1
+                    },
+                    cash: {
+                      Canadian: 4500,
+                      Naira:    76999,
+                      Euros:    "No use",
+                      American: 2207.67
+                    },
+                    id:         "yes"
+    }
+    var myObject = MyObjects.cards.visa;
+    document.getElementById("object").innerHTML = myObject;
+        </script>
+  </div>
+  <div>
+    <p>The loop below will skip (jump and continue) when the number is 4. </p>
+    <script>
+    /* Skippng a loop cycle with 'continue'. */
+  for (i = 1; i <= 7; i++) {
+    if(i==4){
+      continue;
+    }
+    document.write( "The number is " + i + " <br/>");
+  }
+    </script>
+  </div><br>
+  <div>
+    <p>This text <q>The quick brown fox jumps over the lazy dog</q> will split into an array. </p>
+    <script>
+    /* Spliting string into array with split(" ") . */
+    var  myString = "The quick brown fox jumps over the lazy dog"// This is a pangram (i.e a collection of all the alphabets)
+    var iAmSplit = myString.split(" ");
+    document.write("Here is the array: <br/>");
+  for (index in iAmSplit) {
+    document.write( iAmSplit[index] + ", ");
+  }
+    </script>
+  </div><br>
+  <div>
+    <p>This text <q>The quick brown fox jumps over the lazy dog</q> will split into an array of characters. </p>
+    <script>
+    /* Spliting string into array of characters with split("") . */
+    var  myString = "The quick brown fox jumps over the lazy dog"// This is a pangram (i.e a collection of all the alphabets)
+    var iAmSplit = myString.split("");
+    document.write("Here is the characters array: <br/>");
+  for (index in iAmSplit) {
+    document.write( iAmSplit[index] + ", ");
+  }
+    </script>
+  </div><br>
+
+    <div>
+      <p>This text <q>The quick brown fox jumps over the lazy dog</q> will split into an array of characters with limit set to 10 characters. </p>
+      <script>
+      /* Spliting string into array of characters with split("", 10).
+      The seperator is "",and the limit is 10 . */
+      var  myString = "The quick brown fox jumps over the lazy dog"// This is a pangram (i.e a collection of all the alphabets)
+      var iAmSplit = myString.split("",10);
+      document.write("Here is the characters array: <br/>");
+    for (index in iAmSplit) {
+      document.write( iAmSplit[index] + ", ");
+    }
+      </script>
+    </div><br>
+    <div>
+      <p>This text <q>The quick brown fox jumps over the lazy dog</q> will split into an array of words with the setting of starting index and ending index values using <q>substr(0,31)</q>. </p>
+      <script>
+      /* Extract a string into array of characters with substr(0, 25).
+      The starting point index is "0",and the end point index is 25 . */
+      var  myString = "The quick brown fox jumps over the lazy dog"// This is a pangram (i.e a collection of all the alphabets)
+      document.write( myString.substr(31) + " and " + myString.toLowerCase().substr(0,31) + ".");
+      </script>
+    </div><br>
+    <div>
+      <script>
+      /* Try and Catch */
+      try {
+        allert ("This is typed bad!");
+      }
+      catch(e)
+      {
+        e = "This error occurerd: \n" + e
+        alert (e);
+      }
+      </script>
+    </div><br>
+    <div>
+      <script>
+      /* Throw */
+      var Name = prompt ("Enter your name:");
+      try {
+        var leng = Name.length; // Length of user Input
+        if(leng > 5) {
+          throw "Long Name";
+        } else if (leng < 5){
+          throw "Short Name";
+        } else {
+          throw "5 letter name";
+        }
+      }
+      catch(e)
+      {
+        alert (e);
+      }
+      </script>
+    </div><br>
+    <hr>
+    <!-- Math operations-->
+    <div>
+      <p>Math functions </p>
+      <div>
+        <p> 3.895595 will be rounded up to : <span id="demo"></span>  </p>
+      </div>
+      <script>
+        /*Rounding*/
+        var roundMe = 3.895595;
+        document.getElementById("demo").innerHTML = Math.round(roundMe);
+      </script>
+    </div><br>
+
+    <div>
+      <p>Math functions </p>
+      <div>
+        <p> 3 raised to power 5: <span id="demo1"></span> </p>
+      </div>
+
+      <script>
+        /*Exponents*/
+        var exponent = Math.pow(3,5);
+        document.getElementById("demo1").innerHTML = exponent;
+      </script>
+    </div><br>
+
+    <div>
+      <p>Math function </p>
+      <div>
+        <p> PI is equal to : <span id="demo2"></span> </p>
+      </div>
+      <script>
+        /*PI*/
+        var p = Math.PI;
+        document.getElementById("demo2").innerHTML = p;
+      </script>
+    </div><br>
+
+    <div>
+      <p>Math function </p>
+      <div>
+        <p> Ceiling round a number upwards. 4.34321 is rounded up to  : <span id="demo3"></span> </p>
+      </div>
+      <script>
+        /*Ceil*/
+        var ceiledNumber = 4.34321;
+        document.getElementById("demo3").innerHTML = Math.ceil(ceiledNumber);
+      </script>
+    </div><br>
+
+    <div>
+      <p>Math function </p>
+      <div>
+        <p> Flooring round a number downwards. 7.865141 is rounded down to  : <span id="demo4"></span> </p>
+      </div>
+      <script>
+        /*Floor*/
+        var floorNumber = 7.865141;
+        document.getElementById("demo4").innerHTML = Math.floor(floorNumber);
+      </script>
+    </div><br>
+
+    <div>
+      <p>Math function </p>
+      <div>
+        <p>The min() and max() methods, gives the smallest and largest numbers in an array of numbers. </p>
+        <p> The minimum number from (7,0.3,6,3,5,9,4) is : <span id="demo5"></span></p>
+        <p> The maximum number from (7,0.3,6,3,5,9,4) is : <span id="demo6"></span></p>
+      </div>
+      <script>
+        /*Min*/
+        document.getElementById("demo5").innerHTML = Math.min(7,0.3,6,3,5,9,4) + "<br>";
+        /*Max*/
+        document.getElementById("demo6").innerHTML = Math.max(7,0.3,6,3,5,9,4) + "<br>";
+      </script>
+    </div><br>
+
+    <!--OR
+    Minimum and maximum concantenation
+  -->
+    <div>
+      <p>Math function </p>
+      <div>
+        <p>The min() and max() methods, gives the smallest and largest numbers in an array of numbers. </p>
+        <p> The minimum  & maximum number from (7,0.3,6,3,5,9,4) are : <span id="demo7"></span> respectively.</p>
+        </div>
+      <script>
+        /*Min*/
+        document.getElementById("demo7").innerHTML = Math.min(7,0.3,6,3,5,9,4) + ", ";
+        /*Max*/
+        document.getElementById("demo7").innerHTML += Math.max(7,0.3,6,3,5,9,4);
+      </script>
+    </div><br>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page 1 </title>
+  <!--CDN based Jquery form Google-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--Site based Jquery from file-->
+  <script src="jquery-3.3.1.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header>
+    <a href="index.html">Home</a> | <a href="newpage.html">About Us</a> | <a href="page1.html">Products/Services</a> | <a href="contact.html">Contact Us</a> | <a href="myjavascript.html">JavaScript</a> | <a href="testjsskill.html">TestJsSkill</a>
+    | <a href="ajax.html">MyAjax</a> | <a href="mypage.html">MyPage </a> | <a href="myjquery.html">MyJQuery </a> | <a href="myjquery2.html">MyJQuery 2</a>
+  </nav>
+  </header>
+<div>
+Before every <strong>strong</strong> element the word "NOTICE: " will appear.<br/><br/>
+<span>Who was this written by? </span><br><br>
+This is a Code , F=Ke<code>2</code>
+</div>
+<!-- Scroll to the top link-->
+  <div>
+  <a href="#" style="position: fixed; bottom:20px; right:20px; float:right; background: yellow; "> Scroll To Top</a>
+  </div>
+
+
+<button onclick="counter()" type="button">Add another one!</button>
+<div id="number"></div>
+<div class="small"> Small image</div>
+<br><br>
+<div class="big"> Doubled image size</div>
+<br><br>
+<div class="contain1"> Contained image</div>
+<br><br>
+<div class="contain2"> Contained image 2 size</div>
+<br><br>
+<div class="cover1"> Cover image</div>
+<br><br>
+<div class="cover2"> Cover image size 2</div>
+<br><br>
+
+
+
+<!-- Refresh Counter code, using sessionStorage and localStorage -->
+<script>
+  function counter(){
+    if (typeof(Storage) !== "undefined") {
+      if (sessionStorage.counter){
+        sessionStorage.counter = Number(sessionStorage.counter) +1;
+      } else {
+        sessionStorage.counter = 1;
+      }
+      document.getElementById("number").innerHTML = sessionStorage.counter;
+      if(localStorage.counter>1) {
+        document.getElementById("number").innerHTML += "<p>Refresh the page.</p>";
+      }
+    } else {
+      document.getElementById("number").innerHTML = "Sorry, your browser does not "
+      + "support web storage...";
+    }
+  }
+</script>
+</body>
+</html>

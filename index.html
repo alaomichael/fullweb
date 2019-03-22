@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--External stylesheet link -->
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <!--External stylesheet 2 link -->
+  <link rel="stylesheet" type="text/css" href="style2.css"/>
+  <!--External stylesheet 3 link -->
+  <link rel="stylesheet" type="text/css" href="style3.css"/>
+
+  <!--CDN based Jquery from Google-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--Site based Jquery from file-->
+  <script src="jquery-3.3.1.min.js"></script>
+
+
+<!--External favicon link -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<script src="myJavascript.js" type="text/javascript"></script>
+<meta name="description" content="This will describe how or what my site is used for."/>
+<meta name="keywords" content="learn, html, html5, css, css3, javascript, jquery, php"/>
+
+<!-- <meta http-equiv="refresh" content="5" /> -->
+<!-- <meta http-equiv="refresh" content="3; URL=newpage.html" /> -->
+<meta http-equiv="Cache-Control" content="public" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="robots" content="index,follow"/>
+<meta name="copyright" content="Copyright Leomax International"/>
+<meta name="designer" content="Alao Michael, contactleomax@gmail.com"/>
+<meta name="revisit-after" content="Saturday, January 14th, 2019, 4:00 am"/>
+<title> Welcome to Leomax</title>
+</head>
+<body>
+  <header>
+    <a href="#">Welcome</a>
+    <a href="index.html">Home</a> | <a href="newpage.html">About Us</a> | <a href="page1.html">Products/Services</a> | <a href="contact.html">Contact Us</a> | <a href="myjavascript.html">JavaScript</a> | <a href="testjsskill.html">TestJsSkill</a>
+    | <a href="ajax.html">MyAjax</a> | <a href="mypage.html">MyPage </a> | <a href="myjquery.html">MyJQuery </a> | <a href="myjquery2.html">MyJQuery 2</a>
+  </nav>
+  </header>
+
+  <!-- Combining rows and column in a table -->
+  <table width="50%" border="2" cellspacing="5" cellpadding="10" >
+    <tr>
+      <th colspan="2"> Banner</th>
+      <th rowspan="2"> Advert or Image</th>
+          </tr>
+    <tr>
+      <td >Navigation</td>
+      <td>Content</td>
+
+    </tr>
+    </table>
+
+  <table width="50%" border="2" cellspacing="5" cellpadding="10" >
+    <tr style="width: 100%" >
+      <th accesskey="01" tabindex="1"> Id</th>
+      <th style="max-width: 50%"> Name</th>
+      <th style="max-width: 25%"> Gender</th>
+    </tr>
+    <tr>
+      <td >01 </td>
+      <td>Michael </td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <td >02 </td>
+      <td>Esther </td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <td >03 </td>
+      <td>Peculiar </td>
+      <td>Male</td>
+    </tr>
+  </table>
+  <table width="50%" border="2" cellspacing="5" cellpadding="10" >
+    <tr style="width: 100%" >
+      <th accesskey="01" tabindex="1"> Character</th>
+      <th style="max-width: 50%">Entity Name (add ";" )</th>
+      <th style="max-width: 25%"> Description</th>
+    </tr>
+    <tr>
+      <td >"</td>
+      <td>&quot </td>
+      <td>Quotation Mark</td>
+    </tr>
+    <tr>
+      <td >' </td>
+      <td>&apos </td>
+      <td>Apostrophe</td>
+    </tr>
+    <tr>
+      <td >></td>
+      <td>"&gt" </td>
+      <td>Greater Than</td>
+    </tr>
+    <tr>
+      <td ><</td>
+      <td>"&lt" </td>
+      <td>Less Than</td>
+    </tr>
+    <tr>
+      <td >&</td>
+      <td>"&amp" </td>
+      <td>Ampersand</td>
+    </tr>
+    <tr>
+      <td ></td>
+      <td>&nbsp </td>
+      <td>Non-Breaking Space</td>
+    </tr>
+  </table>
+
+<hr/>
+  <p>Text Box</p>
+  <input type="text" name="username" contenteditable="true" spellcheck="true"/>
+  <br/>
+  <br/>
+  <input type="password" name="password"/>
+  <hr/>
+
+  <p>Drop Down Menu</p>
+  <select name="gender">
+<option value="NA" disabled="disabled" selected="selected"> Select Gender</option>
+<option value="male"> Male</option>
+<option value="female">Female</option>
+  </select>
+  <hr/>
+
+  <p>Text Area</p>
+  <textarea name="biography" rows="7" cols="60" contenteditable="true" spellcheck="true"> Add a biography.</textarea>
+
+  <hr/>
+
+  <p>Radio Buttons</p>
+  <input type="radio" name="radio" id="rd1" value="rad1">Radio 1<br/>
+  <input type="radio" name="radio" id="rd2" value="rad2">Radio 2<br/>
+  <input type="radio" name="radio" id="rd3" value="rad3">Radio 3<br/>
+<br/>
+  1<input type="radio" name="radio" id="rd1" value="rad1"><br/>
+  2<input type="radio" name="radio" id="rd1" value="rad2"><br/>
+  3<input type="radio" name="radio" id="rd1" value="rad3"><br/>
+
+  <hr/>
+
+  <p>Check Boxes</p>
+ Good <input type="checkbox" name="checkbox" id="checkbox1"><br/>
+ Better <input type="checkbox" name="checkbox" id="checkbox2" checked="checked"><br/>
+ Best <input type="checkbox" name="checkbox" id="checkbox3"><br/>
+
+ <hr/>
+
+ <p>Buttons</p>
+ <button type="button"> My button - button</button><br/>
+ <input type="button" value="My button - input"/><br/><br/>
+
+ <button type="reset"> Reset - button</button><br/>
+ <input type="reset" value="Reset - input"/><br/><br/>
+
+ <button type="submit"> Submit - button</button><br/>
+ <input type="submit" value="Submit - input"/><br/><br/>
+
+ <hr/>
+
+ <p>Forms</p>
+ <form method="post" action="newpage.html">
+<input type="text" name="name" contenteditable="true" spellcheck="true">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+ </form>
+
+ <hr/>
+
+ <p>I Frame</p>
+ <iframe src="http://udemy.com/" frameborder="1" height="200" width="90%" scrolling ="no"></iframe>
+
+ <hr/>
+
+ <p>Hierachy</p>
+<div style="background-color: blue; padding:10px;">
+  <div style="background-color: red; padding:10px; margin:3px;">
+    <div style="background-color: white; padding:10px; margin:3px;"></div>
+    <div style="background-color: white; padding:10px; margin:3px;"></div>
+  </div>
+</div>
+
+<hr/>
+<div>
+  Does this border the <u>underline</u> word?<br/>
+  Does this border the <u>underline</u> word?<br/>
+
+</div>
+
+<section>
+  <article>
+    <p contenteditable="true" spellcheck="true">Great God is always there for us. </p>
+  </article>
+  <hr/>
+
+  <p>Video</p>
+  <!--Video with Autoplay feature -->
+  <video autoplay="autoplay">
+    <source src="video.mp4" type="video/mp4" />
+    <source src="video.flv" type="video/flv" />
+    <source src="video.ogg" type="video/ogg" />
+    <source src="video.webm" type="video/webm" />
+    Your browser does not support this video type.
+  </video>
+
+  <!--Video with Controls feature -->
+  <video controls="controls">
+    <source src="video.mp4" type="video/mp4" />
+    <source src="video.ogg" type="video/ogg" />
+    <source src="video.webm" type="video/webm" />
+    Your browser does not support this video type.
+
+  </video>
+
+  <!--Video with Loop feature -->
+  <video loop="loop">
+    <source src="video.mp4" type="video/mp4" />
+    <source src="video.ogg" type="video/ogg" />
+    <source src="video.webm" type="video/webm" />
+    Your browser does not support this video type.
+
+  </video>
+
+  <!--Video with Autoplay, Controls and Loop features -->
+  <video autoplay="autoplay" controls="controls" loop="loop">
+    <source src="video.mp4" type="video/mp4" />
+    <source src="video.flv" type="video/flv" />
+    <source src="video.ogg" type="video/ogg" />
+    <source src="video.webm" type="video/webm" />
+    Your browser does not support this video type.
+
+  </video>
+
+  <hr/>
+
+  <p>Video with User Controls faetures</p>
+  <button onclick="playOrPause()"> Play or Pause </button>
+  <button onclick="bigScreen()"> Big screen baby! </button>
+  <button onclick="normalScreen()"> Just regular screen size. </button>
+<br/>
+  <!--Video with Autoplay feature -->
+  <video id="lecture" width="300">
+    <source src="/video.mp4" type="video/mp4" />
+    <source src="video.ogg" type="video/ogg" />
+    <source src="video1.webm" type="video/webm" />
+    Your browser is either old or does not support MP4, OGG or WEBM.
+  </video>
+
+  <hr/>
+
+  <p>Audio</p>
+  <!--Audio with Autoplay, Control, and Loop feature -->
+  <audio autoplay="autoplay" controls="controls" loop="loop">
+    <source src="audio.mp3" type="audio/mpeg" />
+    <source src="music.ogg" type="audio/ogg" />
+    <source src="music.wav" type="audio/wav" />
+    Your browser is old or does not support any of the 3 format above.
+  </audio>
+
+
+</section>
+
+<section>
+  <hr/>
+  <p>Drag and Drop Image</p>
+  <img draggable="true" id="DragMe" src="google.png" ondragstart="drag(event)"
+    width="300" height="70" />
+    <div ondrop="drop(event)" ondragover="allowDrop(event)" id="dropzone"></div>
+</section>
+
+<section>
+  <hr/>
+  <p>Geolocation</p>
+  <p id="coords"></p>
+  <button onclick="getMyPosition()">Find me!</button>
+  <script>
+  var MyLoc = document.getElementById("coords");
+  function getMyPosition() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      MyLoc.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+
+  function showPosition(position){
+    MyLoc.innerHTML = "Latitude: " + position.coords.latitude +
+                      "<br/> Longitude: " + position.coords.longitude;
+  }
+  </script>
+</section>
+<section>
+  <hr/>
+  <div id="Test">
+    My test ID
+  </div>
+
+  <div class="Test">
+    My test class
+  </div>
+  <div>
+    My Test Div
+  </div>
+
+</section>
+
+<section id="UniqueID" class="underline italic bold">
+  <hr/>
+I have an ID and 3 classes!
+</section>
+
+<!-- Scroll to the top link-->
+<div>
+<a href="#" style="position: fixed; bottom:20px; right:20px; float:right; background: yellow; "> Scroll To Top</a>
+</div>
+
+<!--Internal Script should place at the bottom of the html for proper loading-->
+<!-- Script for the Video controls-->
+<script type="text/javascript">
+  var lecture = document.getElementById('lecture');
+
+  function playOrPause() {
+    if (lecture.paused)
+      lecture.play();
+    else {
+      lecture.pause();
+    }
+  }
+
+  function normalScreen () {
+    lecture.width=300;
+  }
+
+  function bigScreen () {
+    lecture.width=500;
+  }
+
+</script>
+
+<!-- Script for the Drag and Drop-->
+<script type="text/javascript">
+  function allowDrop(e) {
+    e.preventDefault();
+    // prevent the image from moving back to its natural area
+}
+    function drag(e) {
+      // allows the item to be dragged
+      e.dataTransfer.setData("Text",e.target.id);
+      }
+  function drop(e) {
+    // this code allows you to drop the item
+    e.preventDefault();
+    d = e.dataTransfer.getData("Text"); // d = data
+    e.target.appendChild(document.getElementById(d));
+  }
+</script>
+<!-- Check if your browser support local storage -->
+<script>
+  if (typeof(Storage) !=="undefined") {
+    // we can accept localStorage
+    alert('Local Storage Accepted');
+  } else {
+    // we can't accept localStorage
+    alert('No localStorage accepted');
+  }
+</script>
+
+<!-- To store information in browser -->
+<script>
+localStorage.myName = "Michael Alao";
+</script>
+
+<!-- To Check information stored in the browser -->
+<script>
+alert(localStorage.myName);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Testing My AJAX skill </title>
+<!--CDN based Jquery form Google-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--Site based Jquery from file-->
+<script src="jquery-3.3.1.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+div h1, div h2, div h3 {display: inline;}
+</style>
+<script>
+// Put Ajax in a function for convenience
+function newAjax() { // This is our shortcut AJAX request function
+  var ajax;
+  if (window.XMLHttpRequest) {
+    // this is for IE 7+, Chrome, Safari and Firefox.
+    ajax = new XMLHttpRequest();
+  } else {
+    // this is for IE 6 and IE 5.
+    ajax = new ActiveXObject ("Microsoft.XMLHTTP");
+  }
+  return ajax;
+  }
+
+  function LoadMe () {
+    var ajaxHandler = newAjax();
+    ajaxHandler.onreadystatechange=function() {
+    if (ajaxHandler.readyState == 4 && ajaxHandler.status == 200) {
+      // execute this section of code when the request page has
+      // truly loaded
+        // use ajax.responseText as the object that holds the page information
+        document.getElementById("loadMe").innerHTML = ajaxHandler.responseText;
+    }
+  }
+  ajaxHandler.open("GET","mypage.html",true);
+  ajaxHandler.send();
+  }
+</script>
+</head>
+<body>
+    <nav>
+      <a href="index.html">Home</a> | <a href="newpage.html">About Us</a> | <a href="page1.html">Products/Services</a> | <a href="contact.html">Contact Us</a> | <a href="myjavascript.html">JavaScript</a> | <a href="testjsskill.html">TestJsSkill</a> | <a href="ajax.html">MyAjax</a>
+      | <a href="mypage.html">MyPage </a> | <a href="myjquery.html">MyJQuery </a> | <a href="myjquery2.html">MyJQuery 2</a>
+    </nav>
+    </nav>
+
+    <div>
+    <p>Current Time: <span id="demo0"></span></p>
+    <script>
+    /* setInterval (function, delay in milliseconds 1.e 1000). 1000 = 1 second*/
+    function time(){
+      var d = new Date(); // How we start our new Date
+      var hour = d.getHours();
+      var minute = d.getMinutes();
+      var second = d.getSeconds();
+      var str = hour + ":" + minute + ":" + second;
+      document.getElementById("demo0").innerHTML = str; // Returns the current time
+      }
+      var initiate = setInterval(function(){time()}, 1000);
+      </script>
+    </div><br>
+    <div>
+      <script>
+      // setTimeout
+    var delayedAlert = setTimeout(function(){alert("Delayed for 5 seconds, before it appears.");}, 5000);
+    </script>
+  </div><br>
+<div>
+<p>Full Date</p>
+<script>
+var d = new Date(); // How we start our new Date
+document.write(d); // Returns the Full date
+</script>
+</div><br>
+<div>
+<p>Current Day</p>
+<script>
+var d = new Date(); // How we start our new Date
+var day = d.getDay(); // Return the index value of the current day
+var WeekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+document.write(WeekDays[day]); // Returns the day of the week
+</script>
+</div><br>
+
+<div id="MyID1" >
+<h3>This </h3> <h2>is</h2> <h1>AJAX'D!</h1>
+
+</div>
+<!-- Scroll to the top link-->
+  <div>
+  <a href="#" style="position: fixed; bottom:20px; right:20px; float:right; background: yellow; "> Scroll To Top</a>
+  </div>
+</body>
+</html>

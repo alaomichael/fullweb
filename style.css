@@ -1,0 +1,586 @@
+/* CSS  external stylesheet */
+/* Width and Height*/
+.auto {width: auto;}
+.half {width: 50%;}
+.pixel {width: 200px;}
+.border {border: 1px solid black;}
+
+/* Styling the Body*/
+body {
+background: darkgray;
+color: yellow;
+border: 5px solid silver;
+margin: 5px;
+padding: 5px;
+}
+
+/* Overwriting a style with !important*/
+body {
+/* background: seagreen !important; */
+margin: 5px;
+padding: 5px;
+}
+
+/* Adding Border Border radius*/
+.topRight { border-top-right-radius: 10px;}
+.bottomRight { border-bottom-right-radius: 10px;}
+.bottomLeft { border-bottom-left-radius: 10px;}
+.topLeft { border-top-left-radius: 10px;}
+
+/* The above is the same as*/
+.radius { border-radius: 10px; }
+
+/* Rounded image edges*/
+.radius2 { border-radius: 50px; }
+
+.float{
+  float: right;
+}
+
+/* Rotating text and image*/
+.rotate {
+  --ms-transform: rotate(15deg);
+  --o-transform: rotate(15deg);
+  --moz-transform: rotate(15deg);
+  --webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  background-color: yellow;
+
+}
+
+.rotate2 {
+  --ms-transform: rotate(-15deg);
+  --o-transform: rotate(-15deg);
+  --moz-transform: rotate(-15deg);
+  --webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  background-color: yellow;
+
+}
+
+.rotate3 {
+  --ms-transform: rotate(-5deg);
+  --o-transform: rotate(-5deg);
+  --moz-transform: rotate(-5deg);
+  --webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  background-color: red;
+
+}
+
+/* Adding Border Image */
+ .url { border-image: url('BorderImage.gif') 20% 20% 20% 20% repeat;
+    border-width:20px;
+ }
+/* OR */
+ .url { border-image: url('BorderImage.gif') 20 20 20 20 repeat;
+    border-width:20px;
+ }
+
+ .border {
+   border-width: 20px;
+  --moz-border-image: url('BorderImage.gif') 20 20 20 20 repeat;
+  --webkit-border-image: url('BorderImage.gif') 20 20 20 20 repeat;
+  --o-border-image: url('BorderImage.gif') 20 20 20 20 repeat;
+  border-image: url('BorderImage.gif') 20 20 20 20 repeat;
+ }
+
+/* Adding Border*/
+.redBorder {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: red;
+}
+
+.redBorder2 {
+  border-width: 2px 10px 5px 15px;
+  border-style:  ridge;
+  border-color: red;
+}
+
+.redBorder {
+  border-width: 4px;
+  border-style: dashed;
+  border-color: orange;
+}
+
+/*box-shadow takes the following in one line,
+horizontal-shadow vertical-shadow *blur *spread *color *inset/outset
+The *'s above represent optional values.
+*/
+.box{
+  box-shadow: 10px 10px 25px 10px blue;
+  background-color:red;
+}
+
+.box2{
+  box-shadow: 2px 2px 10px 5px blue inset;
+  background-color:red;
+}
+
+/* How to change background image size*/
+.small {
+  background-image: url('esther1.jpg');
+  background-size: 40px 40px; /*x-axis y-axis*/
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  width: 50px;
+  height: 50px;
+}
+
+.big {
+  background-image: url('esther1.jpg');
+  background-size: 200% 200%; /*x-axis y-axis*/
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  width: 50px;
+  height: 50px;
+}
+
+.contain1 {
+  background-image: url('esther1.jpg');
+  background-size: contain; /*confine the image in the box*/
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  width: 50px;
+  height: 50px;
+}
+
+.contain2 {
+  background-image: url('esther1.jpg');
+  background-size: contain; /*confine the image in the box*/
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  width: 25px;
+  height: 50px;
+}
+
+.cover1 {
+  background-image: url('esther1.jpg');
+  background-size: cover; /*its covers the entire element*/
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  width: 50px;
+  height: 50px;
+}
+
+.cover2 {
+  background-image: url('esther1.jpg');
+  background-size: cover; /*its covers the entire element*/
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  width: 25px;
+  height: 50px;
+}
+
+/*Adding Text Shadow
+takes the following in one line,
+horizontal-shadow vertical-shadow *blur *color
+The *'s above represent optional values.*/
+.shadow1{
+    text-shadow: 2px 2px;
+}
+
+.shadow2{
+    text-shadow: 2px 2px 10px;
+}
+
+.shadow3{
+    text-shadow: 2px 2px 10px blue;
+}
+
+#Test {
+  color: blue;
+}
+.Test {
+  color: green;
+}
+#UniqueID{
+  border: 1px solid red;
+}
+.line {
+  text-decoration: line-through;
+}
+.overline {
+  text-decoration: overline;
+}
+.underline {
+  text-decoration: underline;
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+
+/*Text Alignment*/
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
+}
+.center{
+  text-align: center;
+}
+.justify {
+  text-align: justify;
+}
+
+/*Text Indent*/
+.indent{
+  text-indent: 10px;
+}
+.indentPercent{
+  text-indent: 10%;
+}
+/*Text Overflow*/
+.overflow{
+  text-overflow: ellipsis;
+}
+.clip{
+  text-overflow: clip;
+}
+
+/*Text Transform*/
+.capitalize{
+  text-transform: capitalize;
+}
+.lowercase{
+  text-transform: lowercase;
+}
+.upper{
+  text-transform: uppercase;
+}
+.none{
+  text-transform: none;
+  }
+
+/*Decorate all element*/
+h1 {
+  font-size: 18px;
+  text-decoration: underline;
+}
+section{
+  background-image: url('background.gif');
+  height: auto;
+  /* Backgroud Image Attachment*/
+  background-attachment: fixed;
+}
+.noImage{
+  background-image: none;
+}
+.inheritImage{
+  background-image: inherit;
+}
+.starImage{
+  background-image: url('background.gif');
+}
+/* Backgroud image repeat*/
+.row {
+  background-image: url('esther1.png');
+  background-repeat: repeat-x;
+  width: 50px;
+  height: 50px;
+}
+.column {
+  background-image: url('esther.png');
+  background-repeat: repeat-y;
+  width: 50px;
+  height: 50px;
+}
+
+/* Backgroud Image Position */
+div {
+  background-image: url('esther2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #0f0;
+}
+/* f20 means font-size 20*/
+.f20 { font-size: 20px; }
+
+/* font family*/
+.ff {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* Making things translucent*/
+.half {
+  opacity: 0.5;
+  filter: alpha(opacity=50)
+}
+
+/* Different media types */
+@media screen {
+/*all computer screen stuff goes in here */
+}
+
+@media handheld {
+/*mobile devices like iPod touch and cell phone styling would go in here */
+}
+
+@media print {
+/*page styling for a printable page. They are usually pretty bland pages to save the user some ink */
+}
+
+@media tv {
+/*this styling is for television-type devices */
+}
+
+/* Styling Element base on their attributes  */
+[mystyle=first] {
+  border: 2px solid orange;
+}
+
+/* Styling by Targeting Elements */
+option[name=dark] {
+  color:white;
+  background-color: black;
+}
+
+/* Browser prefixes guiding rule sample*/
+.transition {
+  --webkit-transition: -webkit-box-shadow 4s;
+  --moz-transition: -moz-box-shadow 4s;
+  --o-transition: box-shadow 4s;
+  --ms-transition: box-shadow 4s;
+  transition: box-shadow 4s;
+}
+
+/* Div Margin*/
+div.margin {
+  margin:10px;
+  border: 1px solid red;
+}
+
+/* Div Top and Bottom Margin*/
+div {margin: 10px 0 10px;}
+
+/* Div Left Margin*/
+div {margin: 0 0 0 10px;}
+
+/* Div Right Margin*/
+div {margin: 0 10px 0 0;
+border: 1px solid pink;}
+
+/* Div Padding*/
+div.padding {
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/* Div Top and Bottom Padding*/
+div {padding: 10px 0 10px;}
+
+/* Div Left Padding*/
+div {padding: 0 0 0 10px;}
+
+/* Div Right Padding*/
+div {padding: 0 10px 0 0;
+}
+
+/* Cursor transformation*/
+div {cursor: default;}
+
+/* Display hide element*/
+div.hide {display: none;}
+
+/* Display block element*/
+div.block {display: block;}
+
+/* Display inline*/
+div.inline {display: inline;}
+
+/* Display inline-flex */
+div.flex {display: inline-flex;}
+
+
+/* Overflow Display Control*/
+div.hidden {overflow: hidden;}
+
+div.auto {overflow: auto;}
+
+div.scroll {overflow: scroll;}
+
+/* Grouping common style */
+#MyID, .blue, h1 {color: blue;}
+
+/* Nesting with DOM knowledge */
+div button { border: 0; background-color: #000; color: #fff;}
+
+div button span { border: 0; background-color: #f00; color: #ff0;}
+
+.green { border: 1px solid green; padding: 5px;}
+
+#UniqueID {border: 1px solid red; padding: 5px; }
+
+div { border: 1px solid blue; padding: 5px;}
+
+.green #UniqueID div {
+  border-bottom: 2px solid #ccc;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Link styling in Div*/
+div:hover {
+  border: 3px solid red;
+}
+/* Normal Links styling */
+a:link {
+  color: blue;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  color: green;
+}
+a:active {
+  color: yellow;
+}
+
+/* First child pseudo*/
+div:first-child {
+  border: 1px solid green;
+}
+/*Style the first child div and its underline*/
+div > u:first-child {
+  border: 1px solid red;
+}
+/*Style all the underlines in the first child div*/
+div:first-child u {
+  border: 1px solid red;
+}
+
+/* First letter pseudo*/
+p:first-letter {
+  font-size: 32px;
+}
+
+/* First line pseudo*/
+body:first-line {
+  word-spacing: 5px;
+}
+
+/* Focus pseudo*/
+textarea:focus {
+  border: 2px solid darkgreen;
+}
+
+/* Before pseudo, put content before any chosen element*/
+strong:before {
+  content: "NOTICE: ";
+}
+
+/* After pseudo, put content after any chosen element*/
+span:after {
+  content: " It was written by Alao Michael.";
+}
+
+/* Before and After pseudo, put content before and after any chosen element*/
+blockquote:before, blockquote:after {
+  content: '"';
+}
+
+/* Links with Classess styling */
+a.new:link {
+  color: black;
+  text-decoration: none;
+}
+a.new:visited {
+  color: purple;
+  text-decoration: none;
+}
+a.new:hover {
+  color: orange;
+  text-decoration: underline;
+}
+a.new:active {
+  color: yellow;
+}
+
+/* Center alignment*/
+.center {
+  margin: 0 auto 0 auto; /* same as margin: 0 auto;*/
+}
+
+/* Custom alignment, to the right using margin*/
+div span a {
+  margin: auto 0 auto 85%;
+}
+
+
+/* Vertical alignment*/
+div code {
+  vertical-align: super;
+}
+
+/*Sprites*/
+.card{
+  background-image: url(sprite.png);
+  background-position: -17px -373px; /*bottom left position: -x -y; */
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 15px;
+}
+
+/* List styling type*/
+.circle {
+  list-style-type: circle;
+}
+.square {
+  list-style-type: square;
+}
+.none {
+  list-style-type: none;
+}
+.disc {
+  list-style-type: disc;
+}
+.upper-roman {
+  list-style-type: upper-roman;
+}
+.lower-roman {
+  list-style-type: lower-roman;
+}
+.upper-alpha {
+  list-style-type: upper-alpha;
+}
+.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+/* side-by-side listing */
+li {
+  display: inline;
+}
+
+/* Custom List Image */
+li {
+  background-image: url('star.png');
+  background-repeat: no-repeat;
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+/* Resizing Text area, horizontally, vertically or both side*/
+.horizontal {
+  resize: horizontal;
+  overflow: auto;
+}
+
+.vertical {
+  resize: vertical;
+  overflow: auto;
+}
+
+.both {
+  resize: both;
+  overflow: auto;
+}

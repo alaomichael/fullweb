@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Testing My AJAX skill </title>
+<!--CDN based Jquery form Google-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--Site based Jquery from file-->
+<script src="jquery-3.3.1.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+div h1, div h2, div h3 {display: inline;}
+</style>
+<script>
+// Put Ajax in a function for convenience
+function newAjax() { // This is our shortcut AJAX request function
+  var ajax;
+  if (window.XMLHttpRequest) {
+    // this is for IE 7+, Chrome, Safari and Firefox.
+    ajax = new XMLHttpRequest();
+  } else {
+    // this is for IE 6 and IE 5.
+    ajax = new ActiveXObject ("Microsoft.XMLHTTP");
+  }
+  return ajax;
+  }
+
+  function LoadMe () {
+    var ajaxHandler = newAjax();
+    ajaxHandler.onreadystatechange=function() {
+    if (ajaxHandler.readyState == 4 && ajaxHandler.status == 200) {
+      // execute this section of code when the request page has
+      // truly loaded
+        // use ajax.responseText as the object that holds the page information
+        document.getElementById("loadMe").innerHTML = ajaxHandler.responseText;
+    }
+  }
+  ajaxHandler.open("GET","mypage.html",true);
+  ajaxHandler.send();
+  }
+</script>
+</head>
+<body>
+    <nav>
+      <a href="index.html">Home</a> | <a href="newpage.html">About Us</a> | <a href="page1.html">Products/Services</a> | <a href="contact.html">Contact Us</a> | <a href="myjavascript.html">JavaScript</a> | <a href="testjsskill.html">TestJsSkill</a> | <a href="ajax.html">MyAjax</a>
+      | <a href="mypage.html">MyPage </a> | <a href="myjquery.html">MyJQuery </a> | <a href="myjquery2.html">MyJQuery 2</a>
+    </nav>
+
+    <div>
+    <p>Current Time: <span id="demo0"></span></p>
+    <script>
+    /* setInterval (function, delay in milliseconds 1.e 1000). 1000 = 1 second*/
+    function time(){
+      var d = new Date(); // How we start our new Date
+      var hour = d.getHours();
+      var minute = d.getMinutes();
+      var second = d.getSeconds();
+      var str = hour + ":" + minute + ":" + second;
+      document.getElementById("demo0").innerHTML = str; // Returns the current time
+      }
+      var initiate = setInterval(function(){time()}, 1000);
+      </script>
+    </div><br>
+    <div>
+      <script>
+      // setTimeout
+    var delayedAlert = setTimeout(function(){alert("Delayed for 5 seconds, before it appears.");}, 5000);
+    </script>
+  </div><br>
+<div>
+<p>Full Date</p>
+<script>
+var d = new Date(); // How we start our new Date
+document.write(d); // Returns the Full date
+</script>
+</div><br>
+<div>
+<p>Current Day</p>
+<script>
+var d = new Date(); // How we start our new Date
+var day = d.getDay(); // Return the index value of the current day
+var WeekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+document.write(WeekDays[day]); // Returns the day of the week
+</script>
+</div><br>
+
+<textarea id="textarea1" placeholder="click inside me.">
+</textarea><br>
+<input type="text" placeholder="click inside me."/><br>
+
+<button type="button" id="focus">Button</button>
+<input id="input" />
+
+<div id="demo1">
+ <p>Hover over me.</p>
+</div><br>
+
+<div id="demo1">
+ <p>MouseDown in here.</p>
+</div><br>
+
+<div id="">
+  <button type="button" id="buttonToggle">Click to Toogle Text.</button>
+ <span>I will be toggled!</span>
+</div><br>
+
+<!-- My Practice code start here -->
+
+<textarea id="myTextArea" placeholder="click here.">
+</textarea><br>
+<input type="text" id="myInput" placeholder="click here."/><br>
+
+<button type="button" id="bfocus">Click to focus</button>
+<input id="binput" />
+
+<div id="demo2">
+ <p id="demo2a">I am dynamic. Put the mouse over me. </p>
+ <p id="demo2a" style="display: none">Wow, the background color and the text, has been changed!</p>
+
+</div><br>
+
+<div id="">
+  <button type="button" id="togglebtn">Click to Toogle.</button>
+ <span> Click the button to toggle me.</span>
+</div><br>
+
+<div id="">
+  <button type="button" id="hide">Hide Text</button>
+ <span id="hideMe"> Click the button to Hide me.</span>
+</div><br>
+
+<div id="">
+  <button type="button" id="show">Show Text</button>
+ <span id="showMe" style="display: none"> Thank you. I am back!</span>
+</div><br>
+
+<div id="">
+  <button type="button" id="fadeMe">Fade Text</button>
+ <span id="fadeOut"> Click the button to Fade me out.</span>
+</div><br>
+
+<div id="slide">
+ <p id="slideUp" > Click me or the button for me to go up! I am ready to go up.</p>
+ <button type="button" id="slide">Slide Up</button>
+</div><br>
+
+<div id="">
+  <button type="button" id="slideUpBtn">Show/Hide Text</button>
+ <span id="slideToggle" > When you click the button, I will slide up and come back. Thank you.</span>
+</div><br>
+
+ <div id="data" data-number="23"> There is a number in here </div><br>
+
+<!-- My Practice code end here -->
+
+</div>
+<!-- Scroll to the top link-->
+  <div>
+  <a href="#" style="position: fixed; bottom:20px; right:20px; float:right; background: yellow; "> Scroll To Top</a>
+  </div>
+  <!-- Jquery Code sample-->
+  <script> // My JQuery Code
+  $(window).ready(function(){
+    alert("Loaded and Ready.");
+  });
+
+  // jquery focus with function inside it
+  $("textarea#textarea1").focus(function(){
+  $("textarea#textarea1").css("display","none");
+  });
+
+  // jquery focus without function inside it to automatically something
+  $("#focus").click(function(){
+    $("#input").focus();
+  });
+
+  // jquery hover codes
+  $("div#demo1").hover(
+    function(){
+      $(this).css("border","1px solid green");
+    },
+    function() {
+      $(this).css("border",0);
+    }
+  );
+
+  // Mouse events listener codes
+// Mouse Down code
+  $("#mouseEvent").mousedown(function(){
+    $(this).append("Mouse Down.");
+  });
+  // Mouse up code
+  $("#mouseEvent").mouseup(function(){
+    $(this).append("<b>Mouse up.</br>");
+  });
+  // toggled. To hide and show text.
+  $("#buttonToggle").click(function(){
+    $(this).next().toggle();
+  });
+
+  /* My Practice code start here */
+  // click function to hide input box
+  $("input#myInput").click(function(){
+    $(this).css("display","none");
+  });
+  // click function to to focus in an input box with an alert message
+  $("button#bfocus").click(function(){
+    $("input#binput").focus();
+    alert("Input Box is now focus.");
+  });
+
+  // hover function to change border style, background color and text.
+  // Note it takes two params, (hover in, hover out)
+// this is activated on hover in
+    $("div#demo2").hover(function(){
+    $(this).css("backgroundColor", "orange");
+    $("p#demo2a").css("display","none");
+    $("p#demo2a").next().toggle();
+    },
+    // this is activated on hover out
+    function(){
+      $(this).css("border","2px dashed white");
+      $(this).css("backgroundColor", "green");
+      $("p#demo2a").css("display","inline");
+      $("p#demo2a").next().toggle();
+    }
+  );
+
+  // Toggle text with button click
+  $("button#togglebtn").click(function(){
+    $(this).next().toggle();
+    $("span").css("fontSize","20px");
+    $("span").css("fontFamily",'"Lucida Sans Unicode", "Lucida Grande", sans-serif"');
+  });
+
+// Keypress codes. Helps to identify the code of the keypressed.
+$("textarea").keypress(function(ev){
+  var keycode = (ev.keyCode ? ev.keyCode : ev.which);
+  if (keycode == 13){
+  alert("You just pressed the Enter key.");
+  }
+  });
+
+  //JS Tenary (question ? true : false);
+  var today = ( WeekDays[day] ==  "Monday" ? "Great,today is Monday" : "Today is not Monday but " + WeekDays[day] + ". ");
+  alert(today);
+
+  // Jquery Effects
+  // Hide and show
+  $("button#show").click(function(){
+    $("#showMe").show("fast"); // the speed is set to fast
+  });
+
+  $("button#hide").click(function(){
+    $("#hideMe").hide(1000); // the speed is set to 1000 milliseconds = 1 second
+  });
+
+  // fadeIn, fadeOut and fadeToggle
+  $("button#fadeMe").click(function(){
+    $("span#fadeOut").fadeOut("slow",function(){
+    $(this).fadeIn(1000)}); // the speed is set to fast
+  });
+
+  $("button#fadeMe1").click(function(){
+    $("span#fadeToggle").fadeToggle(1000); // the speed is set to 1000 milliseconds = 1 second
+  });
+
+  // slideUp, slideDown and slideToggle
+  $("button#slide").click(function(){
+  $("p#slideUp").slideUp(500, function(){
+  $(this).slideDown(1000)}); // the speed is set to 1000 milliseconds
+  $("div#slide").css("border","5px dotted purple");
+  $("div#slide").css("backgroundColor", "white");
+  });
+
+
+
+    $("button#slideUpBtn").click(function(){
+    $("#slideToggle").slideToggle("fast"); // the speed is set to fast
+  });
+
+  /* Data storage */
+   $(document).ready(function(){
+            var MyDiv = $("div#data");
+            MyDiv.click(function(){
+                var divNumber = MyDiv.data("number");
+                alert(divNumber);
+            });
+        });
+  
+  /* My Practice code end here */
+  </script>
+</body>
+</html>
